@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/sortButton"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/nunito"
+        android:text="Сортировать"
+        android:textSize="10sp"
+        android:onClick="sortList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="521dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="135dp"
+        android:layout_height="19dp"
+        android:fontFamily="@font/nunito"
+        android:labelFor="@id/editTextNumber"
+        android:text="Enter your numbers"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.235" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="266dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:fontFamily="@font/nunito"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="218dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/listView"
+        android:layout_width="264dp"
+        android:layout_height="136dp"
+        android:fontFamily="@font/nunito"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="365dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:onClick="addToList"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/nunito"
+        android:text="Добавить"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="289dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
