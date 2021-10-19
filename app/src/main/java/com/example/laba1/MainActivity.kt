@@ -9,7 +9,7 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
     private lateinit var editTextNumber: EditText
     private lateinit var listView: TextView
-    private var list: List<String> = emptyList()
+    private var list: MutableList<Int> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,19 +19,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun addToList(view: View){
-        var newItem = editTextNumber.text.toString()
-        list.toMutableList().add(newItem)
-
-        for(element in list){
-           listView.append(element)
-        }
+        var newItem = editTextNumber.text.toString().toInt()
+        list.add(newItem)
+        editTextNumber.setText(null)
+        listView.append(newItem.toString() + "\n")
     }
 
     fun sortList(view: View){
         val sort = Sort()
         var sortedList = sort.sortList(list)
 
-        listView.append(sortedList.toString())
+
+        listView.setText(null)
+
+
+        for(element in sortedList){
+            listView.append(element.toString() + "\n")
+        }
+
+
 
     }
 
