@@ -27,17 +27,11 @@ class MainActivity : AppCompatActivity() {
 
     fun sortList(view: View){
         val sort = Sort()
-        var sortedList = sort.sortList(list)
-
+        val sortedList : MutableList<Int> = sort.sortList(list)
 
         listView.setText(null)
 
-
-        for(element in sortedList){
-            listView.append(element.toString() + "\n")
-        }
-
-
+        listView.append(sortedList.joinToString())
 
     }
 

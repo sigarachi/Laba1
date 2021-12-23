@@ -10,7 +10,7 @@ class Sort {
             }
         }
 
-        sortedList.sort()
+       sortedList.sort()
 
         return sortedList
     }
